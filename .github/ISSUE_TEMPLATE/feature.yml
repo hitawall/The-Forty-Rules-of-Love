@@ -1,0 +1,41 @@
+name: Feature Request
+description: Propose a new feature or enhancement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: "## New Feature"
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What should be built and why?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know this is done? Use a checklist.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Design Notes
+      description: Sketches, wireframes, or key implementation notes (optional)
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Milestone
+      options:
+        - M0 – Setup
+        - M1 – Data & Grid
+        - M2 – Modal & Full Page
+        - M3 – Share & OG
+        - M4 – Polish & Deploy
+    validations:
+      required: true

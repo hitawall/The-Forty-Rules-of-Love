@@ -1,0 +1,31 @@
+name: Chore / Task
+description: Non-feature work — refactor, dependency update, tooling, docs
+labels: ["chore"]
+body:
+  - type: markdown
+    attributes:
+      value: "## Chore / Task"
+  - type: textarea
+    id: description
+    attributes:
+      label: What needs to be done and why?
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of Done
+      placeholder: |
+        - [ ] ...
+    validations:
+      required: true
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Milestone
+      options:
+        - M0 – Setup
+        - M1 – Data & Grid
+        - M2 – Modal & Full Page
+        - M3 – Share & OG
+        - M4 – Polish & Deploy
