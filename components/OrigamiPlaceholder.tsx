@@ -11,7 +11,6 @@ interface Props {
 // Geometric origami-style SVG placeholder. Replace with real images via
 // OrigamiImage once the WebP assets are in public/origami/.
 export default function OrigamiPlaceholder({ id, palette, size = 120 }: Props) {
-  const seed = id * 137.508;
   const cx = size / 2;
   const cy = size / 2;
   const r = size * 0.38;
