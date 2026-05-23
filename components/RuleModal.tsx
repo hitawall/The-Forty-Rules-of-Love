@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Rule } from "@/data/rules";
 import RuleView from "./RuleView";
+import ShareButtons from "./ShareButtons";
 
 interface Props {
   rule: Rule;
@@ -79,7 +80,7 @@ export default function RuleModal({ rule }: Props) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl">
-          <RuleView rule={rule} controlSlot={CloseButton} />
+          <RuleView rule={rule} controlSlot={CloseButton} shareSlot={<ShareButtons rule={rule} />} />
         </div>
       </motion.div>
     </AnimatePresence>
