@@ -1,6 +1,6 @@
 import { Rule } from "@/data/rules";
 import { paletteForRule } from "@/data/palettes";
-import OrigamiPlaceholder from "./OrigamiPlaceholder";
+import OrigamiImage from "./OrigamiImage";
 
 interface Props {
   rule: Rule;
@@ -28,7 +28,7 @@ export default function RuleView({ rule, shareSlot, controlSlot }: Props) {
         className="flex items-center justify-center py-10"
         style={{ backgroundColor: palette.bg }}
       >
-        <OrigamiPlaceholder id={rule.id} palette={palette} size={160} />
+        <OrigamiImage rule={rule} size={160} />
       </div>
 
       {/* rule content */}

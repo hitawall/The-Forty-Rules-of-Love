@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Rule } from "@/data/rules";
 import { paletteForRule } from "@/data/palettes";
-import OrigamiPlaceholder from "./OrigamiPlaceholder";
+import OrigamiImage from "./OrigamiImage";
 
 interface Props {
   rule: Rule;
@@ -30,7 +30,7 @@ export default function RuleCard({ rule }: Props) {
           className="flex items-center justify-center pt-8 pb-4"
           style={{ backgroundColor: palette.surface }}
         >
-          <OrigamiPlaceholder id={rule.id} palette={palette} size={110} />
+          <OrigamiImage rule={rule} size={110} />
         </div>
 
         <div className="px-5 py-4 flex flex-col gap-1">
